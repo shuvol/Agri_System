@@ -6,26 +6,14 @@
 
 ## 📁 项目结构与模块说明
 
-### 1. `graphchat/` - LangGraph 工作流程图模块
-该目录用于构建基于 [LangGraph](https://github.com/langchain-ai/langgraph) 的对话工作流框架，主要功能包括：
+### 1. `src/` - 存放各类子图
 
-- 定义多节点对话流程（如感知 → 推理 → 决策）
-- 管理节点状态和上下文传递
-- 适用于农业生产中多轮交互任务场景（如病虫害诊断、田间问答）
 
-### 2. `mcp_servers/` - MCP 服务启动模块
-该模块封装了智慧农业任务调度核心的服务端逻辑，包括：
+### 2. `src/primary_graph/` - 存放总图
 
-- 启动 MCP（Multi-Component Process）服务器
-- 负责模型调用、任务调度与服务注册
-- 提供统一的 API 接口供前端与业务调用
 
-### 3. `tools/` - 工具节点模块
-该目录下包含各种工具函数与原始 Function Call 形式工具，主要功能包括：
+### 3. `src/primary_graph/subgraph/` - 存放各个子图在总图的调用方法
 
-- 封装通用工具（如天气查询、作物数据分析、环境感知接口）
-- 提供标准化的工具调用格式，支持 LangChain 工具集成
-- 支持原始 OpenAI Function Calling 接口格式的工具定义
 
 ---
 
