@@ -7,6 +7,7 @@ from src.environment_monitor_graph.graph import EnvironmentMonitorGraph
 from src.primary_graph.graph import PrimaryGraph
 
 _printed = set()  # set集合，避免重复打印
+main_graph = PrimaryGraph().graph
 def _print_event(event: dict, _printed: set, max_length=1500):
     """
     打印事件信息，特别是对话状态和消息内容。如果消息内容过长，会进行截断处理以保证输出的可读性。
